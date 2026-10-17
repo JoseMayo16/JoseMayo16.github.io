@@ -10,7 +10,7 @@ window.SITE = {
   contact: {
     email: "jnjsmayo@gmail.com",
     whatsapp: "573016612888", // solo numeros con indicativo
-    linkedin: "", // URL completa, ej. "https://www.linkedin.com/in/tu-perfil"
+    linkedin: "https://www.linkedin.com/in/juan-josé-mayo-m-1682252b2", // URL completa
   },
 
   // Datos en vivo de Jobs Pulse para la seccion "Intel". Si no cargan, la seccion se oculta.
