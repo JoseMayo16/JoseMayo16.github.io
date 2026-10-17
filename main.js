@@ -45,6 +45,12 @@
     }));
   }
 
+  function renderFacts(container, items) {
+    container.replaceChildren.apply(container, items.map(function (f) {
+      return el("div", { class: "fact" }, [el("dt", { text: f.v }), el("dd", { text: f.d })]);
+    }));
+  }
+
   function renderProjects(container, t, lang) {
     container.replaceChildren.apply(container, S.projects.map(function (p) {
       var links = [];
@@ -108,6 +114,7 @@
       n.title = t[n.dataset.i18nLabel];
     });
     document.querySelectorAll("[data-list]").forEach(function (n) { renderList(n, t[n.dataset.list]); });
+    document.querySelectorAll("[data-facts]").forEach(function (n) { renderFacts(n, t[n.dataset.facts]); });
     renderProjects(document.querySelector("[data-projects]"), t, lang);
     renderStack(document.querySelector("[data-stack]"), t);
     renderContact(document.querySelector("[data-contact]"), t);

@@ -69,6 +69,7 @@ window.SITE = {
     es: {
       "meta.title": "Juan José | Desarrollador web full stack",
       "meta.description": "Desarrollador web full stack en Medellín. Aplicaciones a medida, APIs y automatización con Laravel, Vue y Python.",
+      "nav.about": "Sobre mí",
       "nav.services": "Servicios",
       "nav.projects": "Proyectos",
       "nav.stack": "Stack",
@@ -86,6 +87,16 @@ window.SITE = {
       "term.2": "API en Laravel con validación",
       "term.3": "interfaz en Vue",
       "term.4": "desplegado y documentado",
+      "about.kicker": "Sobre mí",
+      "about.title": "Tres años construyendo para clientes reales.",
+      "about.p1": "Llevo 3 años programando de forma profesional, después de 2 años de estudios. He hecho páginas web para pequeñas empresas, y páginas y automatizaciones para organizaciones grandes como la Universidad de Antioquia (UdeA).",
+      "about.p2": "Me interesa la ciberseguridad y se nota en cómo construyo: validación, autenticación y aislamiento de datos van primero. Fuera del trabajo, los videojuegos.",
+      "about.facts": [
+        { v: "3", d: "años construyendo para clientes" },
+        { v: "2", d: "años de estudios formales" },
+        { v: "B2", d: "inglés certificado" },
+        { v: "UTC-5", d: "horario compatible con EE. UU. y Canadá" },
+      ],
       "services.kicker": "Servicios",
       "services.title": "En qué te puedo ayudar",
       "services": [
@@ -125,6 +136,7 @@ window.SITE = {
     en: {
       "meta.title": "Juan José | Full stack web developer",
       "meta.description": "Full stack web developer based in Medellín, Colombia. Custom web apps, APIs and automation with Laravel, Vue and Python.",
+      "nav.about": "About",
       "nav.services": "Services",
       "nav.projects": "Projects",
       "nav.stack": "Stack",
@@ -142,6 +154,16 @@ window.SITE = {
       "term.2": "Laravel API with validation",
       "term.3": "Vue frontend",
       "term.4": "deployed and documented",
+      "about.kicker": "About me",
+      "about.title": "Three years building for real clients.",
+      "about.p1": "I've been programming professionally for 3 years, after 2 years of formal studies. I've built websites for small businesses, and websites and automations for large organizations such as Universidad de Antioquia (UdeA).",
+      "about.p2": "I'm into cybersecurity, and it shows in how I build: validation, authentication and data isolation come first. Off the clock, I'm a gamer.",
+      "about.facts": [
+        { v: "3", d: "years building for clients" },
+        { v: "2", d: "years of formal studies" },
+        { v: "B2", d: "certified English" },
+        { v: "UTC-5", d: "overlaps US and Canada hours" },
+      ],
       "services.kicker": "Services",
       "services.title": "How I can help",
       "services": [
