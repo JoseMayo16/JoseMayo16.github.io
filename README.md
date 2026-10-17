@@ -2,8 +2,12 @@
 
 Source of my portfolio site: **https://josemayo16.github.io**
 
-Plain HTML, CSS and JavaScript with no build step, in English and Spanish, with light and dark
-themes. All the content (projects, services, contact) lives in [`content.js`](content.js).
+Plain HTML, CSS and JavaScript with no build step, in English and Spanish, with a dark
+security-console / game-HUD look. All the content (projects, services, contact) lives in
+[`content.js`](content.js).
+
+The **Intel** section loads live data from [Jobs Pulse](https://github.com/JoseMayo16/jobs-pulse)
+(`summary.json`, served with CORS by GitHub Pages) and hides itself if the request fails.
 
 ## Projects
 
