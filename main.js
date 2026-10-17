@@ -71,11 +71,17 @@
     }));
   }
 
+  // "573016612888" -> "+57 301 661 2888" (country code + 10-digit number); otherwise as-is.
+  function phoneLabel(digits) {
+    if (digits.length !== 12) return "+" + digits;
+    return "+" + digits.slice(0, 2) + " " + digits.slice(2, 5) + " " + digits.slice(5, 8) + " " + digits.slice(8);
+  }
+
   function renderContact(container, t) {
     var c = S.contact;
     var links = [];
     if (c.email) links.push(["email", "mailto:" + c.email, c.email]);
-    if (c.whatsapp) links.push(["whatsapp", "https://wa.me/" + c.whatsapp, "+" + c.whatsapp]);
+    if (c.whatsapp) links.push(["whatsapp", "https://wa.me/" + c.whatsapp, phoneLabel(c.whatsapp)]);
     if (c.linkedin) links.push(["linkedin", c.linkedin, c.linkedin.replace(/^https?:\/\/(www\.)?/, "")]);
     links.push(["github", githubUrl, "github.com/" + S.githubUser]);
     container.replaceChildren.apply(container, links.map(function (l, i) {

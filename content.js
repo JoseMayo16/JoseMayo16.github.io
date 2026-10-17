@@ -7,8 +7,8 @@ window.SITE = {
   available: true,          // false oculta el aviso "Disponible para proyectos"
 
   contact: {
-    email: "",    // ej. "nombre@correo.com"
-    whatsapp: "", // solo numeros con indicativo, ej. "573001234567"
+    email: "jnjsmayo@gmail.com",
+    whatsapp: "573016612888", // solo numeros con indicativo
     linkedin: "", // URL completa, ej. "https://www.linkedin.com/in/tu-perfil"
   },
 
