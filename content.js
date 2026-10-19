@@ -17,11 +17,29 @@ window.SITE = {
   intelUrl: "https://josemayo16.github.io/jobs-pulse/data/summary.json",
   intelDashboard: "https://josemayo16.github.io/jobs-pulse/",
   // Tecnologias que se resaltan como "mi stack" en la seccion Intel.
-  myStack: ["PHP", "Laravel", "Vue", "Python", "JavaScript", "TypeScript", "Node.js", "MySQL", "PostgreSQL", "Tailwind"],
-  loadout: ["Laravel", "Vue", "Python", "TypeScript", "MySQL", "Linux"],
+  myStack: ["PHP", "Laravel", "Vue", "Python", "JavaScript", "TypeScript", "Node.js", "MySQL", "PostgreSQL", "Tailwind", "Docker"],
+  loadout: ["Laravel", "Vue", "Python", "n8n", "Airtable", "Monday", "MySQL", "Docker"],
 
   // Proyectos como casos: problema, que se construyo y resultado.
   projects: [
+    {
+      title: "Fillout → n8n → Airtable",
+      image: "img/automation.svg",
+      tags:  ["n8n", "Fillout", "Airtable", "APIs"],
+      client: true, // trabajo real: sin repo ni demo publicos
+      repo:  "",
+      demo:  "",
+      es: {
+        problem: "Las respuestas de los formularios había que pasarlas a mano a Airtable: llegaban con duplicados, datos mal escritos y registros que debían actualizarse en vez de crearse de nuevo.",
+        build:   "Flujos en n8n que reciben cada respuesta de Fillout, filtran y limpian los datos, buscan si el registro ya existe y lo crean o lo actualizan en Airtable.",
+        result:  "Los datos llegan limpios, sin duplicados y al registro correcto, sin que nadie tenga que copiarlos a mano.",
+      },
+      en: {
+        problem: "Form responses had to be copied into Airtable by hand: they arrived with duplicates, messy data and records that needed updating instead of being created again.",
+        build:   "n8n workflows that receive every Fillout submission, filter and clean the data, check whether the record already exists, and create or update it in Airtable.",
+        result:  "Data lands clean, deduplicated and in the right record, with nobody copying it by hand.",
+      },
+    },
     {
       title: "InvoiceDesk",
       image: "img/invoice-desk.jpg",
@@ -78,7 +96,7 @@ window.SITE = {
   text: {
     es: {
       "meta.title": "Juan José | Desarrollador full stack",
-      "meta.description": "Desarrollador full stack en Medellín. Aplicaciones web, APIs y automatización con Laravel, Vue y Python.",
+      "meta.description": "Desarrollador full stack en Medellín. Aplicaciones web, APIs y automatización con Laravel, Vue, Python y n8n.",
       "nav.about": "perfil",
       "nav.intel": "intel",
       "nav.work": "proyectos",
@@ -88,31 +106,34 @@ window.SITE = {
       "status.off": "Agenda llena por ahora",
 
       "hero.tag": "player_01 · desarrollador full stack",
-      "hero.lead": "Hago aplicaciones web, APIs y automatizaciones con Laravel, Vue y Python. Llevo 3 años haciéndolo para clientes reales, desde pequeñas empresas hasta la Universidad de Antioquia.",
+      "hero.lead": "Hago aplicaciones web, APIs y automatizaciones con Laravel, Vue, Python y n8n. Llevo casi 3 años haciéndolo, en la Universidad de Antioquia, en Pase Seguro y para pequeñas empresas.",
       "hero.cta": "Cuéntame tu proyecto",
       "hero.work": "Ver proyectos",
 
       "card.class": "Clase",
       "card.classv": "Full stack",
       "card.xp": "Experiencia",
-      "card.xpv": "3 años con clientes + 2 de estudio",
+      "card.xpv": "Casi 3 años",
+      "card.edu": "Formación",
+      "card.eduv": "Tecnólogo en Desarrollo de Software, SENA",
       "card.base": "Base",
       "card.basev": "Medellín, CO · UTC-5",
       "card.lang": "Idiomas",
-      "card.langv": "Español nativo · Inglés B2 cert.",
+      "card.langv": "Español nativo · Inglés conversacional",
       "card.loadout": "Equipo",
       "card.side": "Misiones extra",
       "card.sidev": "Ciberseguridad · Gaming",
 
       "about.kicker": "perfil",
       "about.title": "Sobre mí",
-      "about.p1": "Llevo 3 años programando de forma profesional, después de 2 años de estudios. He hecho páginas web para pequeñas empresas, y páginas y automatizaciones para organizaciones grandes como la Universidad de Antioquia.",
+      "about.p1": "Soy tecnólogo en Análisis y Desarrollo de Software del SENA y llevo casi 3 años trabajando. En la Universidad de Antioquia hice aplicaciones web y automatizaciones con n8n, Monday y Airtable, y en Pase Seguro trabajé en frontend, backend e integraciones entre herramientas.",
       "about.p2": "Me gusta la ciberseguridad y eso se nota en cómo construyo: la validación, la autenticación y el aislamiento de datos van desde el principio, no al final. Fuera del trabajo, juego.",
       "about.log": "Historial",
       "about.items": [
-        { t: "Universidad de Antioquia (UdeA)", d: "Páginas web y automatizaciones." },
-        { t: "Pequeñas empresas", d: "Páginas web para presentar y vender su negocio." },
-        { t: "Proyectos propios", d: "InvoiceDesk, Jobs Pulse y Data Cleaner, con código abierto." },
+        { t: "Pase Seguro S.A.S", m: "ene 2026 - jun 2026", d: "Desarrollador Full-Stack. Soluciones web, automatizaciones e integraciones entre herramientas, soporte de sistemas internos." },
+        { t: "Universidad de Antioquia (UdeA)", m: "oct 2023 - dic 2025", d: "Desarrollador Full-Stack y Automatización. WordPress, FlutterFlow, SQL y automatizaciones con n8n, Monday y Airtable." },
+        { t: "SENA", m: "2022 - 2024", d: "Tecnólogo en Análisis y Desarrollo de Software." },
+        { t: "Pequeñas empresas", m: "freelance", d: "Páginas web para presentar y vender su negocio." },
       ],
 
       "intel.kicker": "intel en vivo",
@@ -130,14 +151,15 @@ window.SITE = {
       "work.result": "Resultado",
       "work.code": "Código",
       "work.demo": "Probar demo",
+      "work.client": "Trabajo con cliente",
 
       "help.kicker": "servicios",
       "help.title": "En qué te puedo ayudar",
       "help.items": [
         { k: "web", t: "Aplicaciones web", d: "Paneles, inventarios, reservas, herramientas internas." },
         { k: "api", t: "APIs y backends", d: "Validación, autenticación y una base de datos bien pensada." },
-        { k: "bot", t: "Automatización", d: "Scripts que recolectan datos, generan reportes o hacen lo repetitivo." },
-        { k: "www", t: "Sitios y landings", d: "Rápidos, adaptados a celular y fáciles de mantener." },
+        { k: "bot", t: "Automatización", d: "Flujos en n8n, formularios conectados a Airtable o Monday, sincronización entre apps y scripts en Python." },
+        { k: "www", t: "Sitios y landings", d: "En código o en WordPress: rápidos, adaptados a celular y fáciles de mantener." },
       ],
       "help.flow": "Cómo trabajamos",
       "help.steps": [
@@ -162,7 +184,7 @@ window.SITE = {
 
     en: {
       "meta.title": "Juan José | Full stack developer",
-      "meta.description": "Full stack developer based in Medellín, Colombia. Web apps, APIs and automation with Laravel, Vue and Python.",
+      "meta.description": "Full stack developer based in Medellín, Colombia. Web apps, APIs and automation with Laravel, Vue, Python and n8n.",
       "nav.about": "profile",
       "nav.intel": "intel",
       "nav.work": "work",
@@ -172,31 +194,34 @@ window.SITE = {
       "status.off": "Fully booked for now",
 
       "hero.tag": "player_01 · full stack developer",
-      "hero.lead": "I build web apps, APIs and automations with Laravel, Vue and Python. I've been doing it for real clients for 3 years, from small businesses to Universidad de Antioquia.",
+      "hero.lead": "I build web apps, APIs and automations with Laravel, Vue, Python and n8n. I've been doing it for almost 3 years, at Universidad de Antioquia, at Pase Seguro and for small businesses.",
       "hero.cta": "Tell me about your project",
       "hero.work": "See my work",
 
       "card.class": "Class",
       "card.classv": "Full stack",
       "card.xp": "Experience",
-      "card.xpv": "3 years with clients + 2 of studies",
+      "card.xpv": "Almost 3 years",
+      "card.edu": "Education",
+      "card.eduv": "Software Development Technologist, SENA",
       "card.base": "Base",
       "card.basev": "Medellín, CO · UTC-5",
       "card.lang": "Languages",
-      "card.langv": "Spanish native · English B2 cert.",
+      "card.langv": "Spanish native · English conversational",
       "card.loadout": "Loadout",
       "card.side": "Side quests",
       "card.sidev": "Cybersecurity · Gaming",
 
       "about.kicker": "profile",
       "about.title": "About me",
-      "about.p1": "I've been programming professionally for 3 years, after 2 years of formal studies. I've built websites for small businesses, and websites and automations for large organizations such as Universidad de Antioquia.",
+      "about.p1": "I'm a Software Analysis and Development Technologist (SENA) with almost 3 years of work experience. At Universidad de Antioquia I built web apps and automations with n8n, Monday and Airtable, and at Pase Seguro I worked on frontend, backend and integrations between tools.",
       "about.p2": "I'm into cybersecurity, and it shows in how I build: validation, authentication and data isolation are there from day one, not bolted on at the end. Off the clock, I play games.",
       "about.log": "Track record",
       "about.items": [
-        { t: "Universidad de Antioquia (UdeA)", d: "Websites and automations." },
-        { t: "Small businesses", d: "Websites to present and sell their business." },
-        { t: "Own projects", d: "InvoiceDesk, Jobs Pulse and Data Cleaner, all open source." },
+        { t: "Pase Seguro S.A.S", m: "Jan 2026 - Jun 2026", d: "Full-Stack Developer. Web solutions, automations and integrations between tools, internal systems support." },
+        { t: "Universidad de Antioquia (UdeA)", m: "Oct 2023 - Dec 2025", d: "Full-Stack and Automation Developer. WordPress, FlutterFlow, SQL and automations with n8n, Monday and Airtable." },
+        { t: "SENA", m: "2022 - 2024", d: "Software Analysis and Development Technologist." },
+        { t: "Small businesses", m: "freelance", d: "Websites to present and sell their business." },
       ],
 
       "intel.kicker": "live intel",
@@ -214,14 +239,15 @@ window.SITE = {
       "work.result": "Result",
       "work.code": "Code",
       "work.demo": "Try the demo",
+      "work.client": "Client work",
 
       "help.kicker": "services",
       "help.title": "How I can help",
       "help.items": [
         { k: "web", t: "Web apps", d: "Dashboards, inventory, booking, internal tools." },
         { k: "api", t: "APIs and backends", d: "Validation, authentication and a well-designed database." },
-        { k: "bot", t: "Automation", d: "Scripts that collect data, build reports or handle the repetitive work." },
-        { k: "www", t: "Sites and landings", d: "Fast, mobile-friendly and easy to maintain." },
+        { k: "bot", t: "Automation", d: "n8n workflows, forms connected to Airtable or Monday, syncing between apps and Python scripts." },
+        { k: "www", t: "Sites and landings", d: "Hand-coded or WordPress: fast, mobile-friendly and easy to maintain." },
       ],
       "help.flow": "How we work",
       "help.steps": [

@@ -49,7 +49,10 @@
 
   function renderLog(t) {
     fill(document.querySelector("[data-log]"), t["about.items"].map(function (it) {
-      return el("li", {}, [el("strong", { text: it.t }), el("span", { text: it.d })]);
+      var kids = [el("strong", { text: it.t })];
+      if (it.m) kids.push(el("span", { class: "log-when mono", text: it.m }));
+      kids.push(el("span", { text: it.d }));
+      return el("li", {}, kids);
     }));
   }
 
@@ -62,13 +65,16 @@
       var rows = ["problem", "build", "result"].map(function (k) {
         return el("div", { class: "case-row" }, [el("dt", { class: "mono", text: t["work." + k] }), el("dd", { text: c[k] })]);
       });
-      var media = el("a", { class: "case-media", href: p.demo || p.repo, target: "_blank", rel: "noopener", tabindex: "-1", "aria-hidden": "true" }, [
-        el("img", { src: p.image, alt: "", loading: "lazy", width: "800", height: "500" }),
-      ]);
+      var img = el("img", { src: p.image, alt: "", loading: "lazy", width: "800", height: "500" });
+      var href = p.demo || p.repo;
+      var media = href
+        ? el("a", { class: "case-media", href: href, target: "_blank", rel: "noopener", tabindex: "-1", "aria-hidden": "true" }, [img])
+        : el("div", { class: "case-media", "aria-hidden": "true" }, [img]);
+      var id = t["work.case"] + " " + String(i + 1).padStart(2, "0") + (p.client ? " · " + t["work.client"] : "");
       return el("article", { class: "case hud" }, [
         media,
         el("div", { class: "case-body" }, [
-          el("p", { class: "case-id mono", text: t["work.case"] + " " + String(i + 1).padStart(2, "0") }),
+          el("p", { class: "case-id mono", text: id }),
           el("h3", { text: p.title }),
           el("dl", { class: "case-rows" }, rows),
           el("ul", { class: "chips" }, p.tags.map(function (x) { return el("li", { text: x }); })),

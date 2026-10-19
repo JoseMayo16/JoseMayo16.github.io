@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500" role="img" aria-label="Fillout form to n8n workflow (filter, clean, deduplicate) to Airtable (create or update record)">
+  <defs>
+    <pattern id="g" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#ffffff" stroke-opacity=".04"/>
+    </pattern>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0 0L10 5L0 10z" fill="#3df5a0"/>
+    </marker>
+  </defs>
+  <style>
+    text { font-family: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; fill: #e6edf3; }
+    .t { font-size: 22px; font-weight: 700; }
+    .s { font-size: 14px; fill: #9aa7b6; }
+    .k { font-size: 12px; fill: #3df5a0; letter-spacing: .1em; }
+    .a { font-size: 13px; fill: #ffb547; }
+    .box { fill: #0b0f14; stroke: #2a3644; }
+    .hot { fill: #0b0f14; stroke: #3df5a0; }
+    .flow { stroke: #3df5a0; stroke-width: 2; stroke-dasharray: 6 6; fill: none; animation: dash 1.2s linear infinite; }
+    @keyframes dash { to { stroke-dashoffset: -12; } }
+    @media (prefers-reduced-motion: reduce) { .flow { animation: none; } }
+  </style>
+
+  <rect width="800" height="500" fill="#07090c"/>
+  <rect width="800" height="500" fill="url(#g)"/>
+
+  <text class="k" x="40" y="56">// AUTOMATION · CLIENT WORK</text>
+
+  <!-- Fillout -->
+  <rect class="box" x="40" y="150" width="190" height="200"/>
+  <text class="k" x="60" y="182">01 · INPUT</text>
+  <text class="t" x="60" y="222">Fillout</text>
+  <text class="s" x="60" y="250">form submitted</text>
+  <rect x="60" y="272" width="150" height="14" fill="#111820"/>
+  <rect x="60" y="296" width="110" height="14" fill="#111820"/>
+  <rect x="60" y="320" width="130" height="14" fill="#111820"/>
+
+  <!-- n8n -->
+  <rect class="hot" x="300" y="110" width="210" height="280"/>
+  <text class="k" x="320" y="142">02 · n8n WORKFLOW</text>
+  <text class="t" x="320" y="182">n8n</text>
+  <text class="s" x="320" y="222">› filter</text>
+  <text class="s" x="320" y="250">› clean &amp; normalize</text>
+  <text class="s" x="320" y="278">› find existing record</text>
+  <text class="s" x="320" y="306">› deduplicate</text>
+  <text class="a" x="320" y="352">no manual copy-paste</text>
+
+  <!-- Airtable -->
+  <rect class="box" x="580" y="150" width="180" height="200"/>
+  <text class="k" x="600" y="182">03 · OUTPUT</text>
+  <text class="t" x="600" y="222">Airtable</text>
+  <text class="s" x="600" y="256">+ create if new</text>
+  <text class="s" x="600" y="284">↻ update if exists</text>
+  <rect x="600" y="308" width="140" height="1" fill="#2a3644"/>
+  <rect x="600" y="320" width="140" height="1" fill="#2a3644"/>
+
+  <path class="flow" d="M232 250H296" marker-end="url(#arrow)"/>
+  <path class="flow" d="M512 250H576" marker-end="url(#arrow)"/>
+
+  <text class="s" x="40" y="440">Every submission lands clean, deduplicated and in the right record.</text>
+</svg>

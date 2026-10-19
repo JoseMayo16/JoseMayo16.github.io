@@ -355,6 +355,7 @@ h2 { font-size: clamp(32px, 4.6vw, 50px); font-weight: 600; line-height: 1.04; l
 .log li:first-child::before { background: var(--accent); }
 .log strong { font-weight: 600; }
 .log span { color: var(--muted); font-size: 15px; }
+.log .log-when { font-size: 12px; color: var(--accent); }
 
 /* intel */
 
@@ -458,6 +459,8 @@ h2 { font-size: clamp(32px, 4.6vw, 50px); font-weight: 600; line-height: 1.04; l
   transition: transform .5s ease, filter .3s ease;
 }
 .case:hover .case-media img { transform: scale(1.025); filter: none; }
+/* Diagramas: se ven completos, centrados sobre el fondo. */
+.case-media img[src$=".svg"] { object-fit: contain; object-position: center; background: var(--bg); filter: none; }
 .case-media::after {
   content: "";
   position: absolute;
@@ -482,6 +485,7 @@ h2 { font-size: clamp(32px, 4.6vw, 50px); font-weight: 600; line-height: 1.04; l
 .case-row:last-child dd { color: var(--ink); }
 
 .case-links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: auto; padding-top: 6px; }
+.case-links:empty { display: none; }
 
 /* servicios */
 
