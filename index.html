@@ -3,12 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Juan José | Desarrollador full stack</title>
-<meta name="description" content="Desarrollador full stack en Medellín. Aplicaciones web, APIs y automatización con Laravel, Vue y Python.">
-<meta name="theme-color" content="#07090c">
+<title>Juan José Mayo | Desarrollador full stack y de automatización</title>
+<meta name="description" content="Desarrollador full stack y de automatización en Medellín. Flujos en n8n, integraciones con APIs y aplicaciones web con Laravel y Vue.">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Juan José | Full stack developer">
-<meta property="og:description" content="Web apps, APIs and automation with Laravel, Vue and Python. Medellín, Colombia.">
+<meta property="og:title" content="Juan José Mayo | Full stack and automation developer">
+<meta property="og:description" content="n8n workflows, API integrations and web apps with Laravel and Vue. Medellín, Colombia.">
 <meta property="og:url" content="https://josemayo16.github.io/">
 <meta property="og:image" content="https://josemayo16.github.io/img/og.jpg">
 <meta property="og:image:width" content="1200">
@@ -17,139 +16,111 @@
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
 <link rel="stylesheet" href="styles.css">
+<script>
+  // Aplica el tema guardado antes de pintar para evitar parpadeo.
+  try {
+    var t = localStorage.getItem("theme");
+    if (t) document.documentElement.dataset.theme = t;
+  } catch (e) {}
+</script>
 </head>
 <body>
 
 <a class="skip" href="#main">Saltar al contenido / Skip to content</a>
 
-<header class="topbar">
-  <div class="wrap topbar-inner">
-    <a class="brand" href="#top" aria-label="Inicio"><span class="brand-mark">JJ</span><span class="brand-sep">://</span><span class="brand-user" data-github-user></span></a>
-    <nav class="nav" aria-label="Principal">
-      <a href="#perfil"><span>01</span><span data-i18n="nav.about"></span></a>
-      <a href="#intel" data-intel-only><span>02</span><span data-i18n="nav.intel"></span></a>
-      <a href="#proyectos"><span>03</span><span data-i18n="nav.work"></span></a>
-      <a href="#servicios"><span>04</span><span data-i18n="nav.help"></span></a>
-      <a href="#contacto"><span>05</span><span data-i18n="nav.contact"></span></a>
+<div class="shell">
+  <aside class="side">
+    <a class="me" href="#inicio">
+      <img data-photo alt="" width="40" height="40">
+      <span class="me-text"><strong data-name></strong><span data-i18n="role"></span></span>
+    </a>
+    <p class="status" data-status><span class="dot" aria-hidden="true"></span><span data-status-text></span></p>
+    <nav class="toc" aria-label="Secciones / Sections">
+      <a href="#inicio" data-i18n="nav.intro"></a>
+      <a href="#casos" data-i18n="nav.work"></a>
+      <a href="#mercado" data-i18n="nav.market" data-market-only></a>
+      <a href="#experiencia" data-i18n="nav.experience"></a>
+      <a href="#servicios" data-i18n="nav.services"></a>
+      <a href="#contacto" data-i18n="nav.contact"></a>
     </nav>
-    <div class="lang" role="group" aria-label="Idioma / Language">
-      <button type="button" data-lang="es">ES</button>
-      <button type="button" data-lang="en">EN</button>
+    <div class="side-tools">
+      <div class="seg" role="group" aria-label="Idioma / Language">
+        <button type="button" data-lang="es">ES</button>
+        <button type="button" data-lang="en">EN</button>
+      </div>
+      <button type="button" class="icon-btn" id="theme" data-i18n-label="theme.toggle">
+        <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path class="sun" d="M12 4V2m0 20v-2m8-8h2M2 12h2m13.66-5.66 1.41-1.41M4.93 19.07l1.41-1.41m0-11.32L4.93 4.93m14.14 14.14-1.41-1.41M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10Z"/><path class="moon" d="M20 14.5A8 8 0 0 1 9.5 4 8 8 0 1 0 20 14.5Z"/></svg>
+      </button>
     </div>
-  </div>
-</header>
+  </aside>
 
-<main id="main">
-  <section class="hero wrap" id="top">
-    <div class="hero-copy">
-      <p class="status" data-status><span class="led" aria-hidden="true"></span><span data-status-text></span></p>
-      <p class="tag mono" data-i18n="hero.tag"></p>
-      <h1 class="glitch" data-name></h1>
+  <main id="main">
+    <section id="inicio" class="intro">
+      <h1 data-i18n="hero.title"></h1>
       <p class="lead" data-i18n="hero.lead"></p>
+      <dl class="spec" data-spec></dl>
       <div class="actions">
-        <a class="btn btn-primary" href="#contacto" data-i18n="hero.cta"></a>
-        <a class="btn btn-ghost" href="#proyectos" data-i18n="hero.work"></a>
+        <a class="btn btn-primary" data-email-link data-i18n="hero.cta"></a>
+        <a class="btn" href="#casos" data-i18n="hero.work"></a>
       </div>
-    </div>
+    </section>
 
-    <aside class="player hud" aria-label="Ficha / Profile card">
-      <div class="player-top">
-        <div class="avatar">
-          <img data-photo alt="" width="460" height="460">
-        </div>
-        <div class="player-id mono">
-          <span class="dim">ID</span>
-          <strong data-github-user></strong>
-          <span class="lvl"><span class="dim">XP</span> ~3y</span>
-        </div>
-      </div>
-      <dl class="stats">
-        <div><dt data-i18n="card.class"></dt><dd data-i18n="card.classv"></dd></div>
-        <div><dt data-i18n="card.xp"></dt><dd data-i18n="card.xpv"></dd></div>
-        <div><dt data-i18n="card.edu"></dt><dd data-i18n="card.eduv"></dd></div>
-        <div><dt data-i18n="card.base"></dt><dd data-i18n="card.basev"></dd></div>
-        <div><dt data-i18n="card.lang"></dt><dd data-i18n="card.langv"></dd></div>
-        <div><dt data-i18n="card.side"></dt><dd data-i18n="card.sidev"></dd></div>
-      </dl>
-      <div class="loadout">
-        <p class="mono dim" data-i18n="card.loadout"></p>
-        <ul class="chips" data-loadout></ul>
-      </div>
-    </aside>
-  </section>
+    <section id="casos">
+      <header class="sec-head">
+        <h2 data-i18n="work.title"></h2>
+        <p data-i18n="work.lead"></p>
+      </header>
+      <div class="cases" data-cases></div>
+    </section>
 
-  <section id="perfil" class="section wrap about">
-    <header class="head">
-      <p class="kicker" data-i18n="about.kicker"></p>
-      <h2 data-i18n="about.title"></h2>
-    </header>
-    <div class="about-body">
-      <div class="about-text">
-        <p data-i18n="about.p1"></p>
-        <p data-i18n="about.p2"></p>
-      </div>
-      <div class="log">
-        <p class="mono dim" data-i18n="about.log"></p>
-        <ol data-log></ol>
-      </div>
-    </div>
-  </section>
-
-  <section id="intel" class="section wrap intel" hidden>
-    <header class="head">
-      <p class="kicker" data-i18n="intel.kicker"></p>
-      <h2 data-i18n="intel.title"></h2>
-      <p class="sub" data-i18n="intel.lead"></p>
-    </header>
-    <div class="panel hud">
-      <p class="panel-meta mono"><span class="led" aria-hidden="true"></span><span data-intel-meta></span></p>
+    <section id="mercado" hidden>
+      <header class="sec-head">
+        <h2 data-i18n="market.title"></h2>
+      </header>
+      <p class="market-headline" data-market-headline></p>
+      <p class="muted" data-i18n="market.lead"></p>
       <ol class="bars" data-bars></ol>
-      <a class="arrow-link" data-intel-link target="_blank" rel="noopener"><span data-i18n="intel.link"></span> <span aria-hidden="true">-&gt;</span></a>
-    </div>
-  </section>
+      <p class="market-meta">
+        <span data-market-meta></span>
+        <a data-market-link target="_blank" rel="noopener"><span data-i18n="market.link"></span> ↗</a>
+      </p>
+    </section>
 
-  <section id="proyectos" class="section wrap">
-    <header class="head">
-      <p class="kicker" data-i18n="work.kicker"></p>
-      <h2 data-i18n="work.title"></h2>
-    </header>
-    <div class="cases" data-cases></div>
-  </section>
+    <section id="experiencia">
+      <header class="sec-head">
+        <h2 data-i18n="exp.title"></h2>
+      </header>
+      <ol class="rows" data-exp></ol>
+      <p class="note" data-i18n="exp.note"></p>
+    </section>
 
-  <section id="servicios" class="section wrap">
-    <header class="head">
-      <p class="kicker" data-i18n="help.kicker"></p>
-      <h2 data-i18n="help.title"></h2>
-    </header>
-    <ul class="help" data-help></ul>
-    <p class="mono dim flow-title" data-i18n="help.flow"></p>
-    <ol class="flow" data-steps></ol>
-  </section>
+    <section id="servicios">
+      <header class="sec-head">
+        <h2 data-i18n="services.title"></h2>
+      </header>
+      <ul class="rows" data-services></ul>
+      <h3 class="sub-title" data-i18n="process.title"></h3>
+      <ol class="steps" data-steps></ol>
+    </section>
 
-  <section id="contacto" class="section wrap contact">
-    <header class="head">
-      <p class="kicker" data-i18n="contact.kicker"></p>
-      <h2 data-i18n="contact.title"></h2>
-      <p class="sub" data-i18n="contact.lead"></p>
-    </header>
-    <div class="contact-links" data-contact></div>
-  </section>
-</main>
+    <section id="contacto">
+      <header class="sec-head">
+        <h2 data-i18n="contact.title"></h2>
+        <p data-i18n="contact.lead"></p>
+      </header>
+      <ul class="rows contact" data-contact></ul>
+    </section>
 
-<footer class="footer wrap mono">
-  <span>&copy; <span data-year></span> <span data-name></span></span>
-  <span data-i18n="footer.made"></span>
-  <span class="dim" aria-hidden="true">&uarr;&uarr;&darr;&darr;&larr;&rarr;&larr;&rarr;BA</span>
-</footer>
-
-<div class="toast hud" role="status" aria-live="polite" hidden>
-  <p class="mono toast-title" data-i18n="egg.title"></p>
-  <p data-i18n="egg.text"></p>
+    <footer class="footer">
+      <span>&copy; <span data-year></span> <span data-name></span></span>
+      <span data-i18n="footer.made"></span>
+    </footer>
+  </main>
 </div>
 
-<noscript><p class="wrap">Este sitio necesita JavaScript. / This site needs JavaScript.</p></noscript>
+<noscript><p>Este sitio necesita JavaScript. / This site needs JavaScript.</p></noscript>
 <script src="content.js"></script>
 <script src="main.js"></script>
 </body>
