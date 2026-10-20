@@ -61,13 +61,13 @@ window.SITE = {
         summary: "Facturación con PDF, envío por correo y pagos con tarjeta.",
         problem: "Un freelancer factura en Excel, manda los PDF a mano y no sabe con certeza quién le debe.",
         build:   "API en Laravel 13 y app en Vue 3 con TypeScript: facturas con PDF, envío por correo en cola y pago con tarjeta por Stripe Checkout.",
-        result:  "Cada empresa ve solo sus datos, un pago no se registra dos veces aunque Stripe reenvíe el aviso, y 55 tests lo respaldan.",
+        result:  "Cada empresa ve solo sus datos, un pago no se registra dos veces aunque Stripe reenvíe el aviso, y 56 tests lo respaldan.",
       },
       en: {
         summary: "Invoicing with PDF, email delivery and card payments.",
         problem: "A freelancer invoices from a spreadsheet, emails PDFs by hand and is never quite sure who still owes them.",
         build:   "Laravel 13 API and Vue 3 + TypeScript app: PDF invoices, queued email delivery and card payments through Stripe Checkout.",
-        result:  "Each company only sees its own data, a payment is never recorded twice even if Stripe resends the webhook, and 55 tests back it up.",
+        result:  "Each company only sees its own data, a payment is never recorded twice even if Stripe resends the webhook, and 56 tests back it up.",
       },
     },
     {
