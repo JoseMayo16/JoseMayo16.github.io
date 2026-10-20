@@ -113,7 +113,7 @@
     var rows = [];
     if (c.email) rows.push(["email", "mailto:" + c.email, c.email, true]);
     if (c.whatsapp) rows.push(["whatsapp", "https://wa.me/" + c.whatsapp, phoneLabel(c.whatsapp)]);
-    if (c.linkedin) rows.push(["linkedin", c.linkedin, "linkedin.com/in/juan-josé-mayo-m"]);
+    if (c.linkedin) rows.push(["linkedin", c.linkedin, c.linkedin.replace(/^https?:\/\/(www\.)?/, "")]);
     rows.push(["github", githubUrl, "github.com/" + S.githubUser]);
     fill(document.querySelector("[data-contact]"), rows.map(function (r) {
       var attrs = { href: r[1] };
