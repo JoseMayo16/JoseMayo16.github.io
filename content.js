@@ -96,7 +96,7 @@ window.SITE = {
       tags:  ["Python", "Pyodide", "WebAssembly"],
       kind:  "own",
       repo:  "https://github.com/JoseMayo16/data-cleaner",
-      demo:  "https://josemayo16.github.io/data-cleaner/",
+      demo:  "https://josemayo16.github.io/data-cleaner/?sample=crm-contacts.csv&run=1",
       es: {
         summary: "Limpia archivos de Excel y CSV sin que salgan del computador.",
         problem: "Archivos de Excel y CSV con duplicados, nombres mal escritos, fechas mezcladas y teléfonos en mil formatos.",
